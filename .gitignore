@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+ENV/
+uv.lock
+
+# Test and coverage output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+artifacts/
+
+# Build output
+build/
+dist/
+*.egg-info/
+*.whl
+*.tar.gz
+.tox/
+.nox/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.codex/
+.auth/
+auth.json
+codex-auth.json
+.pypirc
+
+# OS files
+.DS_Store
+Thumbs.db

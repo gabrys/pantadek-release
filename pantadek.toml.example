@@ -1,0 +1,19 @@
+# Copy this file to pantadek.toml in your project and adjust the values.
+suite_dir = "./qa"
+base_url = "http://127.0.0.1:8000"
+
+# Optional: connect the isolated browser container to this existing Docker network.
+# docker_network = "my-app_default"
+
+docker_command = ["docker"]
+model = "gpt-6.1-terra"
+case_timeout_seconds = 600
+command_timeout_seconds = 300
+max_cases = 20
+locale = "en-US"
+timezone = "UTC"
+codex_auth_file = "~/.codex/auth.json"
+
+# Values are environment-variable NAMES. Keep secret values out of this file.
+[secrets]
+# PASSWORD = "TEST_PASSWORD"

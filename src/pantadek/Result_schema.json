@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "summary", "steps"],
+  "properties": {
+    "status": {"type": "string", "enum": ["passed", "failed", "blocked"]},
+    "summary": {"type": "string"},
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["number", "status", "expected", "observed", "evidence"],
+        "properties": {
+          "number": {"type": "integer"},
+          "status": {"type": "string", "enum": ["passed", "failed", "blocked", "skipped"]},
+          "expected": {"type": "string"},
+          "observed": {"type": "string"},
+          "evidence": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pantadek"
+version = "0.0.1.dev1"
+description = "Run human-readable AI-assisted browser test scenarios from your project"
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+keywords = ["testing", "browser", "e2e", "qa", "codex"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Software Development :: Testing",
+]
+
+[project.scripts]
+pantadek = "pantadek.run:cli"
+
+[project.urls]
+Homepage = "https://github.com/gabrys/pantadek-release"
+Repository = "https://github.com/gabrys/pantadek-release"
+Issues = "https://github.com/gabrys/pantadek-release/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pantadek = ["Dockerfile", ".dockerignore", "Runner_instructions.md", "Result_schema.json"]
